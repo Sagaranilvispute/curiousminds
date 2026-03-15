@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f6efe5;
+  --surface: rgba(255, 250, 244, 0.8);
+  --surface-strong: #fffaf4;
+  --text: #1f2a2c;
+  --muted: #5f6b6e;
+  --line: rgba(31, 42, 44, 0.12);
+  --accent: #ef6c3f;
+  --accent-deep: #bf4b2a;
+  --accent-soft: #f6c261;
+  --teal: #1c7c7d;
+  --shadow: 0 24px 60px rgba(31, 42, 44, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(246, 194, 97, 0.45), transparent 28%),
+    radial-gradient(circle at 85% 10%, rgba(28, 124, 125, 0.18), transparent 22%),
+    linear-gradient(180deg, #fcf7f1 0%, var(--bg) 100%);
+}
+
+@layer base {
+  * {
+    @apply border-[color:var(--line)];
+  }
+
+  body {
+    @apply font-body antialiased;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .page-shell {
+    @apply mx-auto w-[min(1200px,calc(100%-32px))] py-6;
+  }
+
+  .glass-panel {
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(14px);
+  }
+
+  .section-card {
+    @apply glass-panel rounded-[32px] border px-6 py-8 md:px-9 md:py-9;
+  }
+
+  .eyebrow {
+    @apply mb-3 text-[0.78rem] font-bold uppercase tracking-[0.18em] text-coralDeep;
+  }
+
+  .headline {
+    @apply font-display tracking-[-0.03em] text-ink;
+  }
+
+  .body-copy {
+    @apply leading-7 text-muted;
+  }
+
+  .cta-primary {
+    @apply inline-flex min-h-[50px] items-center justify-center rounded-full bg-gradient-to-br from-coral to-coralDeep px-6 font-bold text-white shadow-[0_12px_30px_rgba(239,108,63,0.28)] transition duration-200 hover:-translate-y-0.5;
+  }
+
+  .cta-secondary {
+    @apply inline-flex min-h-[50px] items-center justify-center rounded-full border border-[color:var(--line)] bg-white/60 px-6 font-bold text-ink transition duration-200 hover:-translate-y-0.5;
+  }
+
+  .orb {
+    @apply absolute rounded-full blur-[2px];
+  }
+}
