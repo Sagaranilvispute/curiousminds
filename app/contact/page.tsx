@@ -17,9 +17,9 @@ export default function ContactPage() {
           <div className="glass-panel rounded-[24px] border p-6">
             <h2 className="text-2xl font-bold text-ink">Get in touch</h2>
             <div className="body-copy mt-4 space-y-2">
-              <p>Email: hello@curiousminds.edu</p>
-              <p>Phone: +91 90000 00000</p>
-              <p>Hours: Monday to Saturday, 9:00 AM to 6:00 PM</p>
+              <p>Email: universityassistantsagar@gmail.com</p>
+              <p>Phone: +91 7738804002</p>
+              <p>Hours: 10:00 AM to 10:00PM</p>
             </div>
           </div>
 

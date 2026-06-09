@@ -11,7 +11,7 @@ export function Hero() {
     <section className="relative pb-12">
       <div className="grid gap-7 lg:grid-cols-[1.2fr_0.9fr] lg:items-center">
         <div>
-          <p className="eyebrow">A modern space for active learning</p>
+          <p className="eyebrow">Empowering Students with Career Guidance & Global Education</p>
           <h1 className="headline max-w-[10ch] text-[clamp(3.4rem,8vw,6.6rem)] leading-[0.96]">
             Education built for curiosity, not just completion.
           </h1>
