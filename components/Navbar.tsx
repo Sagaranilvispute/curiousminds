@@ -1,33 +1,33 @@
-import Link from "next/link";
 import Image from "next/image";
 
 export function Navbar() {
-  return (
-    <nav className="flex items-center justify-between px-6 py-4 bg-transparent">
+return ( <div className="flex flex-col md:flex-row md:items-center md:justify-between p-4">
 
-      {/* Logo */}
-      <Link href="/" className="flex items-center gap-3">
-        <Image
-          src="/Logo.png"
-          alt="Adaptive Minds Logo"
-          width={120}
-          height={120}
-          className="object-contain cursor-pointer"
-        />
-        <span className="text-2xl font-semibold text-ink">
-          Adaptive Minds
-        </span>
-      </Link>
+  {/* Logo */}
+  <div className="flex flex-col items-center md:items-start">
+    <a href="/">
+      <Image
+        src="/Logo.png"
+        alt="Adaptive Minds Logo"
+        width={120}
+        height={120}
+      />
+    </a>
 
-      {/* Navigation */}
-      <div className="flex items-center gap-6 text-lg font-medium">
-        <Link href="/">Home</Link>
-        <Link href="/career-guidance">Career Guidance</Link>
-        <Link href="/study-abroad">Study Abroad</Link>
-        <Link href="/find-a-tutor">Tutors</Link>
-        <Link href="/contact">Contact</Link>
-      </div>
+    <p className="font-bold text-lg mt-2">
+      Adaptive Minds
+    </p>
+  </div>
 
-    </nav>
-  );
+  {/* Menu */}
+  <div className="flex flex-wrap justify-center gap-4 mt-4 md:mt-0">
+    <a href="/">Home</a>
+    <a href="/career-guidance">Career Guidance</a>
+    <a href="/study-abroad">Study Abroad</a>
+    <a href="/find-a-tutor">Tutors</a>
+    <a href="/contact">Contact</a>
+  </div>
+
+</div>
+);
 }
